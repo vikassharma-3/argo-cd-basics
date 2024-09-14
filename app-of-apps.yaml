@@ -9,5 +9,5 @@ spec:
   project: default
   source:
     path: apps
-    repoURL: https://github.com/<repo>
+    repoURL: https://github.com/vikassharma-3/argo-cd-basics
     targetRevision: HEAD

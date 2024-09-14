@@ -16,10 +16,10 @@ if [[ -z ${GITHUB_REPOSITORY} ]] ; then
     exit 3
 fi
 
-## Search for <repo> and replace it with 
-find ${workspace} -name '*.yaml' -type f -exec grep -l '<repo>' {} \; | while read file
+## Search for vikassharma-3/argo-cd-basics and replace it with 
+find ${workspace} -name '*.yaml' -type f -exec grep -l 'vikassharma-3/argo-cd-basics' {} \; | while read file
 do
-    sed -i "s?<repo>?${GITHUB_REPOSITORY}?g" ${file}
+    sed -i "s?vikassharma-3/argo-cd-basics?${GITHUB_REPOSITORY}?g" ${file}
 done
 echo "Updated files with repo" >> ~/.status.log
 
